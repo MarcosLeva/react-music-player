@@ -43,10 +43,7 @@
     "prepublishOnly": "yarn build",
     "prettier": "prettier -c --write '**/*'",
     "pretty:quick": "pretty-quick",
-    "lint-staged": "lint-staged",
-    "release": "semantic-release",
-    "bundlesize": "bundlesize",
-    "prepare": "husky install"
+    "bundlesize": "bundlesize"
   },
   "config": {
     "commitizen": {
@@ -58,15 +55,6 @@
     "dist/*",
     "*.less"
   ],
-  "lint-staged": {
-    "*.{css,less,json}": [
-      "prettier --write"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "author": "Jinke.Li <1359518268@qq.com>",
   "repository": {
     "type": "git",
@@ -93,7 +81,6 @@
     "component"
   ],
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "classnames": "^2.3.1",
     "downloadjs": "^1.4.7",
     "is-mobile": "^2.2.2",
@@ -101,6 +88,7 @@
     "rc-slider": "^9.7.2",
     "rc-switch": "^3.2.2",
     "react-draggable": "^4.4.3",
+    "react-icons": "^4.4.0",
     "sortablejs": "^1.13.0"
   },
   "bundlesize": [

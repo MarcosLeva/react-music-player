@@ -13,7 +13,7 @@ import Switch from 'rc-switch'
 import React, { cloneElement, createRef, PureComponent } from 'react'
 import { createPortal } from 'react-dom'
 import Draggable from 'react-draggable'
-import Sortable, { Swap } from 'sortablejs'
+//import Sortable, {Swap} from 'sortablejs'
 import AudioListsPanel from './components/AudioListsPanel'
 import CircleProcessBar from './components/CircleProcessBar'
 import {
@@ -72,7 +72,7 @@ import {
   uuId,
 } from './utils'
 
-Sortable.mount(new Swap())
+//Sortable.mount(new Swap())
 
 const IS_MOBILE = getIsMobile()
 
@@ -2176,10 +2176,10 @@ export default class ReactJkMusicPlayer extends PureComponent {
         name: 'clear',
         value: this.clearAudioLists,
       },
-      {
+      /*{
         name: 'sortable',
         value: this.sortable,
-      },
+      },*/
     ].forEach(({ name, value }) => {
       Object.defineProperty(audio, name, {
         value,
@@ -2355,7 +2355,7 @@ export default class ReactJkMusicPlayer extends PureComponent {
     this.removeMobileListener()
     this.removeLyric()
     this._onDestroyed()
-    this.sortable && this.sortable.destroy()
+    //this.sortable && this.sortable.destroy()
   }
 
   onAudioCanPlay = () => {
@@ -2375,14 +2375,14 @@ export default class ReactJkMusicPlayer extends PureComponent {
       return
     }
 
-    if (this.sortable) {
+    /*if (this.sortable) {
       this.sortable.destroy()
-    }
-    this.sortable = new Sortable(container, {
+    }*/
+    /*this.sortable = new Sortable(container, {
       onEnd: this.onAudioListsSortEnd,
       ...defaultOptions,
       ...sortableOptions,
-    })
+    })*/
   }
 
   componentDidUpdate(_, prevState) {
